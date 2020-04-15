@@ -1,14 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 """The setup script."""
 
 try:
     from setuptools import setup, find_packages
 except ImportError:
     from distutils.core import setup, find_packages
-
-from mootdx import __version__
 
 
 def parse_requirements(filename):
@@ -28,7 +25,7 @@ test_requirements.append('pytest')
 
 setup(
     name='mootdx',
-    version=__version__,
+    version='0.3.18',
     description="通达信数据读取接口.",
     long_description=readme + '\n\n' + history,
     author="bopo.wang",
@@ -40,11 +37,7 @@ setup(
     license="MIT license",
     zip_safe=False,
     keywords='mootdx',
-    entry_points={
-        'console_scripts': [
-            'mootdx = mootdx.__main__:execute',
-        ]
-    },
+    entry_points={'console_scripts': ['mootdx = mootdx.__main__:execute',]},
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
